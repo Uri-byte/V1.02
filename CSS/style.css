@@ -1,0 +1,242 @@
+@font-face{
+    font-family: "Open Sans";
+    src: url("../Fonts/Open_Sans/OpenSans-Light.ttf");
+}
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Open Sans";
+    font-size: 16px;
+
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+/*----HEADER----*/
+header{
+    background-image: url(../IMG/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 600px;
+}
+
+header .menu{
+    margin: 40px 0;
+    text-align: right;
+}
+
+header .menu a{
+    color: #ffffff;
+    margin: 0 20px;
+    padding-bottom: 9px; 
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    border:2px solid transparent;
+    
+}
+header .menu a:hover{
+    border-bottom:2px solid #ffffff;
+}
+
+header .contenedor-text{
+    display: flex;
+    margin:150px ;
+    align-items: center;
+    justify-content: center;
+}
+
+header .contenedor-text .text{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 60px;
+    
+
+}
+header .contenedor-text .text h1{
+    font-size: 50px;
+
+}
+header .contenedor-text .text h2{
+    font-size: 25px;
+}
+
+header .contenedor-text .text h1,
+header .contenedor-text .text h2{
+    color: #ffffff;
+    font-weight:400; 
+    margin:0px;   
+}
+/*-----MAIN----*/
+.main .contenedor{
+    overflow: visible;
+}
+.main{
+    text-align: center;
+}
+.main .acercade .foto{
+ margin-top: -100px;
+}
+
+.main .acercade .foto img{
+    vertical-align: top;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.3);
+}
+
+.main .acercade .text{
+   line-height:25px;
+    margin: 20px auto 20px auto;
+    padding: 20px;
+}
+.main .acercade .text .titulo{
+    font-size: 35px;
+    margin-bottom:10px;
+    color:#DD820D;
+}
+.main .acercade .text .parrafo{
+    font-size: 1.1rem;
+}
+/*--MAIN TRABAJOS--*/
+.trabajos .contenedor{
+    overflow: hidden;
+}
+.main .trabajos{
+    background: #F2F2F2;
+    padding: 20px 0;
+}
+.main .trabajos .titulo{
+    font-size: 34px;
+    margin-bottom:30px;
+    color:#DD820D;
+    text-align: center;
+}
+.main .trabajos .contenedor-trabajos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;  
+}
+.main .trabajos .contenedor-trabajos .trabajo{
+    width: 25%;
+}
+.main .trabajos .contenedor-trabajos .trabajo .thumb{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.main .trabajos .contenedor-trabajos .trabajo .thumb img{
+    width: 100%;
+    max-width: 200px;
+    vertical-align: top;
+    border-radius: 10px;
+    opacity: 0.9;
+    transition: all 0.8s ease ;
+}
+.main .trabajos .contenedor-trabajos .trabajo .thumb img:hover{
+    box-shadow:1px 1px 10px 0.6px #888686;
+    opacity: 1;
+    max-width: 215px;
+}
+
+/*----FOOTER----*/
+footer .contacto{
+    padding: 60px 0;
+}
+
+footer .contacto .titulo{
+    font-size: 34px;
+    margin-bottom:25px;
+    color:rgb(221, 130, 13);
+    text-align: center;
+}
+
+footer .contacto .formulario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"],
+footer .contacto .formulario textarea{
+    padding: 20px;
+    width: 48%;
+    color:#888686;
+    border: 1px solid #7a7777;
+    border-radius:5px; 
+    margin-bottom: 25px;
+}
+footer .contacto .formulario textarea{
+    width: 100%;
+    min-width: 100%;
+    height: 100px;
+    max-height: 300px;
+    min-height: 100px;
+}
+footer .contacto .formulario input[type="text"]:focus,
+footer .contacto .formulario input[type="email"]:focus,
+footer .contacto .formulario textarea:focus{
+    border: 2px solid #DD820D ;
+}
+footer .contacto .formulario .bottom{
+    margin: auto;
+    padding: 20px  40px;
+    border:none;
+    border-radius: 5px;
+    background: #DD820D;
+    font-size: 20px;
+    color:#ffffff;
+    cursor: pointer;
+    
+}
+footer .contacto .formulario .bottom:hover{
+    background: #eea23f;
+}
+/*----FOOTER REDES----*/
+
+footer .redes-sociales{
+    background: #141050; 
+    padding: 60px 0;
+}
+footer .redes-sociales .contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+footer .redes-sociales a{
+    display: block;
+    color: #ffffff;
+    font-size: 40px;
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+footer .redes-sociales .github:hover{
+    background: #333;
+}
+footer .redes-sociales .gmail:hover{
+    background: #bd190a;
+}
+/*---MEDIA QUERY---*/
+
+@media screen and (max-width:800px){
+    header .menu{text-align: center;}
+    .main .trabajos .contenedor-trabajos .trabajo{width: 45%;}
+}
+
+@media screen and (max-width:500px){
+    header .contenedor-text{margin:120px ;}
+    header .contenedor-text .text h1{font-size: 35px;}
+    header .contenedor-text .text h2{font-size: 15px;}
+    footer .contacto .formulario{flex-direction: column;}
+    footer .contacto .formulario input[type="text"],
+    footer .contacto .formulario input[type="email"]{ width: 100%;}
+}
